@@ -28,16 +28,16 @@ Make sure that all the libraries which have been imported in the program exist i
  To excecute the program, user should:
  
  - open the command line
- - change directory to be in the folder where your program is
+ - change directory to be in the folder coding_challenge
  - type te command: *bash run.sh*
 
 ## Program execution
 
 There is a shell script file named run.sh in the folder that allow to exsecute 3 programs. 
 
-First and second programs of the file are executed by using an input file named tweets.txt. Input file is a list of tweet messages. The first program, words_tweeted.py produce the total count for each word in the Input file and save them in the output file named ft1.txt. The second program, median_unique.py produce the median number of unique words per tweet and save tem to ft2.txt
+First and second programs of the file are executed by using an input file named tweets.txt. Input file is a list of tweet messages. The first program, words_tweeted.py produce the total count for each word in the Input file and save them in the output file named ft1.txt. The second program, median_tweeted.py produce the median number of unique words per tweet and save tem to ft2.txt
 
-The third program is connected to API named tweepy. It saves messages send by tweeted in live in a text file API_tweets.txt And uses those tweet to calculate the median. This median is updated as tweets come in and save in the file ft3.txt. The file contains all the median that have been calculated. 
+The third program is connected to API named tweepy. It saves messages send by tweeter in live in a text file API_tweets.txt And uses those tweet to calculate the median. This median is updated as tweets come in and save in the file ft3.txt. The file contains all the median that have been calculated. 
 
 ##Program structure
 
@@ -50,11 +50,11 @@ init : initialization function.
 count_words: this function creates a list of the words from input file tweets.txt and the number of time each word appears. It takes filename as parameter
 
 
-* words_tweet.py file has 2 functions:*
+*median_tweet.py file has 2 functions:*
 
 init : initialization function.
 
-Median_number: this function count the number of words in each tweet and store them in a list. Ten it uses that list to calculate the median of the word in tweets as tweets come in. It takes the input file in parameter and  return a list of median
+Median_number: this function count the number of words in each tweet and store them in a list. Then it uses that list to calculate the median of the word in tweets as tweets come in. It returns a list of median
 
 
 *data_collection_tweepy.py has 3 function*
@@ -69,13 +69,13 @@ on_error: Called when a non-200 status code is returned and print the status on 
 
 init: initialization function.
 
-print_words_to_screen: This function print list of the words from input file and the number of time each word appears to the command line screen. It takes the list of the words and the number of time each of them appears returned by count_words in parameter. It takes a second parameter used by an impoted function named lambda.
+print_words_to_screen: This function print list of the words from input file and the number of time each word appears to the command line screen.
 
-print_words_to_file : This function print the list of the words and how many time each word appear to the output file, It takes the list returned by count_words and the output file in parameter. It takes a third parameter used by an impoted function named lambda.
+print_words_to_file : This function print the list of the words and how many time each word appear to the output file.
 
-print_to_screen: This function print medians calculated to the command line screen. It takes the list on median returned by median_number in parameter
+print_med_to_screen: This function print medians calculated to the command line screen.
 
-print_to_file : This function print medians calculated to the output file. It takes the list on median returned by median_number and the output file in parameter. 
+print_med_to_file : This function print medians calculated to the output file.
 
 ### Input and output file
 
@@ -89,6 +89,7 @@ There are four output file.
 - ft1.txt to save the words and the number of time each of them appear 
 - ft2.txt to save median of unique word per tweet.
 - ft3.txt to save median of unique word per tweet. This one is connected to API and the file is updated as tweet messages come in
+- API_tweets.txt: where tweet messages from tweeter are save. this on is connected to tweepy API
 
 ## Example
 

@@ -79,11 +79,11 @@ print_to_file : This function print medians calculated to the output file. It ta
 
 ### Input and output file
 
-* Input file*
+*Input file*
 
 There is one input file tweet.txt where tweet messages are saved
 
-* Output file*
+*Output file*
 
 There are four output file. 
 - ft1.txt to save the words and the number of time each of them appear 
